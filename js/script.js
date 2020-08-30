@@ -12,7 +12,7 @@ const personalMovieDB = {
 
 let job = 0;
 
-while (job < 2) {
+do {
     const a = prompt('Один из последних просмотренных фильмов?'),
           b = prompt('На сколько оцените его?');
     
@@ -25,6 +25,7 @@ while (job < 2) {
         job--;
     }
 }
+while (job < 2)
 
 if (personalMovieDB.count < 10) {
     console.log('Просмотрено мало фильмов');
