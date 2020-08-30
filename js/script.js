@@ -10,15 +10,19 @@ const personalMovieDB = {
     privat: false
 };
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов?', ''),
-          b = prompt('На сколько оцените его?', '');
+let job = 0;
+
+while (job < 2) {
+    const a = prompt('Один из последних просмотренных фильмов?'),
+          b = prompt('На сколько оцените его?');
+    
+    job++;
+
     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
         personalMovieDB.movies[a] = b;
-        console.log('Good Job');
     } else {
         console.log('ERROR');
-        i--;
+        job--;
     }
 }
 
